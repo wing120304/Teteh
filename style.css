@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    color: white;
+    animation: fadeIn 2.5s ease-in-out;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    background: #ff4e60;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+button:hover {
+    background: #ff1940;
+    transform: scale(1.1);
+}
+
+audio {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 RESPONSIF */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    animation: fade 3s ease-in-out infinite alternate;
+}
+
+button {
+    padding: 10px 20px;
+    background: pink;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}

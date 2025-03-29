@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Dhea Rosigianti</title>
+    <link href="dhea.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Untuk Dhea Rosigianti</h1>
+
+    <div class="gallery">
+        <img src="1.jpg" alt="Dhea">
+        <img src="2.jpg" alt="Dhea">
+        <img src="3.jpg" alt="Dhea">
+    </div>
+
+    <h2 class="text">Doa buat Teteh Dhea Rosigianti
+
+        Ya Allah, aku berdoa buat tetehku tersayang, Dhea Rosigianti.
+        Semoga selalu sehat, bahagia, dan diberi umur yang panjang penuh berkah.
+        Lancar rezekinya, dimudahkan segala urusannya, dan selalu dikelilingi orang-orang baik.
+        
+        Kalau lagi ada masalah, semoga selalu kuat dan sabar.
+        Kalau lagi sedih, semoga cepat diganti sama kebahagiaan yang lebih besar.
+        Pokoknya, semoga teteh selalu dalam lindungan Allah,
+        Diberi hidup yang penuh keberkahan dan kebahagiaan.
+        
+        Aamiin. 💖</h2>
+
+    <h3 class="end-text">Semoga Jadi Teteh Yang Baik✨</h3>
+
+    <div class="photo-bottom">
+        <img src="4.jpg" alt="Dhea">
+    </div>
+
+    <audio id="lagu" autoplay loop>
+        <source src="hbd.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("lagu");
+
+        setTimeout(() => {
+            audio.volume = 1;
+            audio.play().catch(() => console.log("Autoplay dicekal, klik layar untuk putar lagu!"));
+        }, 100);
+
+        document.body.addEventListener("click", () => {
+            audio.play();
+        });
+
+        let images = document.querySelectorAll('.gallery img');
+        let i = 0;
+        setInterval(() => {
+            images.forEach(img => img.style.opacity = 0);
+            images[i].style.opacity = 1;
+            i = (i + 1) % images.length;
+        }, 3000);
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+
+        setInterval(() => {
+            window.scrollBy(0, 1);
+            if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+                window.scrollTo(0, 0);
+            }
+        }, 50);
+    });
+
+    const jumlahBunga = 100;
+    for (let i = 0; i < jumlahBunga; i++) {
+        let bunga = document.createElement("div");
+        bunga.classList.add("bunga");
+        bunga.style.left = Math.random() * 100 + "vw";
+        bunga.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(bunga);
+    }
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+        margin: 0;
+        background: #111;
+        text-align: center;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth;
+    }
+    .container {
+        padding: 20px;
+    }
+    .header {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ff66b2;
+    }
+    .gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 15px;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+        box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+    }
+    .gallery img:first-child {
+        opacity: 1;
+    }
+    .bunga {
+        position: fixed;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background: pink;
+        opacity: 0.8;
+        border-radius: 50%;
+        animation: jatuh linear infinite;
+    }
+    @keyframes jatuh {
+        to {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+    .text, .end-text {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        animation: muncul 2s ease-in-out infinite alternate;
+        color: #ff66b2;
+    }
+    @keyframes muncul {
+        from {
+            opacity: 0.6;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .photo-bottom img {
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 20px rgba(255, 105, 180, 0.7);
+    }
+</style>
+</body>
+</html>
